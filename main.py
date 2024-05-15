@@ -17,17 +17,17 @@ def fft_radix2(x):
     return X
 
 
-fs = 2**10 # Sampling frequency
-dt = 1/fs # Sampling interval
+fs = 2**10  # Sampling frequency
+dt = 1/fs  # Sampling interval
 # Generate timestamps of samples
 t = np.arange(0, 1, dt)
 # Generate white noise signal
 x = np.random.randn(*t.shape)
-# Compute DFT using your implementation
+# Compute DFT using that implementation
 X = fft_radix2(x)
 # Compute DFT using reference implementation from numpy
 X_ref = np.fft.fft(x)
-# Error between your implementation and reference implementation
+# Error between that implementation and reference implementation
 X_err = np.abs(X - X_ref)**2
 # RMSE
 X_RMSE = np.sqrt(np.mean(X_err))
