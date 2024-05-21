@@ -255,3 +255,6 @@ cython_debug/
 #!*.dcp
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,vivado,xilinxvivado
+
+
+!*.m

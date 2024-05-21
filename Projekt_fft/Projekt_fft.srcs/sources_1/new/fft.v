@@ -12,18 +12,25 @@ input start;
 input reset;
 input data_clk;
 output reg ready;
-input [`W-1:0] data_in;
-output reg [`W-1:0] data_out;
+input signed [`W-1:0] data_in;
+output reg signed [`W-1:0] data_out;
 
 reg [3:0] state; //current coprocessor state
-parameter IDLE = 0, CLOCKING_IN = 1, CALCULATING = 2, READY_WAITING = 3, CLOCKING_OUT = 4;
+parameter IDLE = 0, CLOCKING_IN = 1, CALCULATING = 2, CLOCKING_OUT = 3;
 reg [`r-1:0] idx; //index for clocking samples
 wire [`r-1:0] idxreversed;
-reg [`W-1:0] data[0:`N-1]; //data buffer
-
+reg [`r:0] outIdx;
+reg signed [`W-1:0] dataI[0:`N-1], dataQ[0:`N-1]; //data buffer
+reg signed [`W-1:0] tempI, tempQ;
 reg signed [`W-1:0] twiddleI[0:`N-2], twiddleQ[0:`N-2]; //I and Q twiddles
+reg [`r+1:0] bottomIdx;
+reg [`r:0] topIdx, shift;
 
-reverse reverser(idx, idxreversed); //bit reverser instance
+reverse #(`r) reverser(idx, idxreversed); //bit reverser instance
+
+reg signed [`W-1:0] mul1I, mul1Q, mul2I, mul2Q;
+reg signed [2*`W-1:0] mulOutI, mulOutQ;
+//cplxmul #(`W) mul(mul1I, mul1Q, mul2I, mul2Q, mulOutI, mulOutQ);
 
 //calculate twiddles
 integer i, j, k;
@@ -52,11 +59,48 @@ begin
             end
         end
         CALCULATING: begin
-            //calculate
-            #10;
-            idx <= 0;
-            ready <= 1;
-            state <= CLOCKING_OUT;
+            if(topIdx < (bottomIdx >> 1)) begin
+                //actual FFT calculation
+                tempI = dataI[shift + topIdx];
+                tempQ = dataQ[shift + topIdx];
+                
+                mul1I = dataI[shift + (bottomIdx >> 1) + topIdx];
+                mul1Q = dataQ[shift + (bottomIdx >> 1) + topIdx];
+                mul2I = twiddleI[(bottomIdx >> 1) + topIdx - 1];
+                mul2Q = twiddleQ[(bottomIdx >> 1) + topIdx - 1];
+                
+                mulOutI = (mul1I * mul2I) - (mul1Q * mul2Q);
+                mulOutQ = (mul1I * mul2Q) + (mul1Q * mul2I);
+                
+                dataI[shift + (bottomIdx >> 1) + topIdx] = mulOutI >>> `D;
+                dataQ[shift + (bottomIdx >> 1) + topIdx] = mulOutQ >>> `D;
+                
+                dataI[shift + topIdx] = dataI[shift + topIdx] + dataI[shift + (bottomIdx >> 1) + topIdx];
+                dataQ[shift + topIdx] = dataQ[shift + topIdx] + dataQ[shift + (bottomIdx >> 1) + topIdx];
+                
+                dataI[shift + (bottomIdx >> 1) + topIdx] = tempI - dataI[shift + (bottomIdx >> 1) + topIdx];
+                dataQ[shift + (bottomIdx >> 1) + topIdx] = tempQ - dataQ[shift + (bottomIdx >> 1) + topIdx];
+                
+                topIdx <= topIdx + 1;
+            end 
+            else begin
+                shift = shift + bottomIdx;
+                if(shift < `N) begin
+                    topIdx <= 0;
+                end
+                else begin
+                    bottomIdx = bottomIdx << 1;
+                    if(bottomIdx <= `N) begin
+                        shift <= 0;
+                        topIdx <= 0;
+                    end
+                    else begin
+                        ready <= 1;
+                        outIdx <= 0;
+                        state <= CLOCKING_OUT;
+                     end
+                end
+            end
         end
     endcase
 end
@@ -66,20 +110,29 @@ always @(posedge data_clk)
 begin
     case(state)
         CLOCKING_IN: begin
-           data[idxreversed] <= data_in;
+           dataI[idxreversed] <= data_in;
+           dataQ[idxreversed] <= 0;
            if(idx == `N - 1)
+           begin
                 state <= CALCULATING;
+                bottomIdx <= 2;
+                topIdx <= 0;
+                shift <= 0;
+           end
            else
                 idx = idx + 1; 
         end
         CLOCKING_OUT: begin
-           data_out <= data[idx];
-           if(idx == `N - 1) begin
+           if(outIdx & 1)
+                data_out = dataQ[outIdx >> 1];
+           else
+                data_out = dataI[outIdx >> 1];
+           if(outIdx == (2*`N) - 1) begin
                 state <= IDLE;
                 ready <= 0;
            end
            else
-                idx = idx + 1; 
+                outIdx = outIdx + 1; 
         end
     endcase
 end

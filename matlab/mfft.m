@@ -2,9 +2,9 @@ close all
 clear
 clc
 
-N = 256;
+N = 8;
 n = 0:N-1;
-input = cos(2 * pi * n / N * 4) + sin(2 * pi * n / N * 14);
+input = cos(2 * pi * n / N * 1);
 
 figure(1);
 plot(input);
@@ -45,7 +45,6 @@ while k <= N % loop for all butterfly diagram stages
            % by the twiddle earlier)
            input(i + k / 2 + m + 1) = x - input(i + k / 2 + m + 1);
            m = m + 1;
-           t = t + 1;
         end
         i = i + k;
     end

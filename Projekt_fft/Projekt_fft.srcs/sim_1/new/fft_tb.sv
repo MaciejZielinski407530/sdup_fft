@@ -6,11 +6,12 @@ module fft_tb;
 
 reg clk, reset, start, data_clk;
 wire ready;
-reg [`W-1:0] data[0:`N-1] = {0, 1, 2, 3, 4, 5, 6, 7};
-wire [`W-1:0] outbuffer;
-reg [`W-1:0] inbuffer;
+reg signed [`W-1:0] data[0:`N-1] = {1.0 * `SCALE, 0.7071 * `SCALE, 0, -0.7071 * `SCALE, -1.0 * `SCALE, -0.7071 * `SCALE, 0, 0.7071 * `SCALE};
+reg signed [`W-1:0] dataOut[0:2*`N-1];
+wire signed [`W-1:0] outbuffer;
+reg signed [`W-1:0] inbuffer;
 
-integer i;
+integer i, j;
 
 fft fft(clk, reset, start, ready, data_clk, inbuffer, outbuffer);
 
@@ -42,13 +43,11 @@ end
 
 always @(posedge ready)
 begin
-    for(i = 0; i < `N; i = i + 1)
+    for(j = 0; j < (2*`N); j = j + 1)
     begin
-        data_clk = 1;
-        #5;
-        data_clk = 0;
-        #5;
-        data[i] = outbuffer;
+        #5 data_clk = 1;
+        #5 data_clk = 0;
+        dataOut[j] = outbuffer;
     end  
 end
 
