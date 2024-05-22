@@ -7,13 +7,14 @@ module fft_tb;
 reg clk, reset, start, data_clk;
 wire ready;
 reg signed [`W-1:0] data[0:`N-1] = {1.0 * `SCALE, 0.7071 * `SCALE, 0, -0.7071 * `SCALE, -1.0 * `SCALE, -0.7071 * `SCALE, 0, 0.7071 * `SCALE};
+//reg signed [`W-1:0] data[0:`N-1] = {1.0 * `SCALE, 2.0 * `SCALE, 3.0 * `SCALE, 4.0 * `SCALE};
 reg signed [`W-1:0] dataOut[0:2*`N-1];
 wire signed [`W-1:0] outbuffer;
 reg signed [`W-1:0] inbuffer;
 
 integer i, j;
 
-fft fft(clk, reset, start, ready, data_clk, inbuffer, outbuffer);
+fft #(.FFT_SIZE(`N), .FFT_SIZE_LOG(`r), .WIDTH(`W), .DECIMAL(`D)) fft (clk, reset, start, ready, data_clk, inbuffer, outbuffer);
 
 //Clock generator
 initial
