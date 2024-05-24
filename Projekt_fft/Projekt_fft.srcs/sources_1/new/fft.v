@@ -13,7 +13,7 @@ output reg signed [WIDTH-1:0] data_out);
 localparam PI = 3.14159265359;
 
 reg [3:0] state; //current coprocessor state
-parameter IDLE = 0, CLOCKING_IN = 1, CALCULATING = 2, CLOCKING_OUT = 3;
+localparam IDLE = 0, CLOCKING_IN = 1, CALCULATING = 2, CLOCKING_OUT = 3;
 reg [FFT_SIZE_LOG-1:0] idx; //index when clocking samples in
 wire [FFT_SIZE_LOG-1:0] idxreversed; //bit-reversed index input
 reg [FFT_SIZE_LOG:0] outIdx; //index when clocking samples out
@@ -22,9 +22,9 @@ reg signed [WIDTH-1:0] tempI, tempQ; //temporary buffer when multiplying
 reg signed [WIDTH-1:0] twiddleI[0:FFT_SIZE-2], twiddleQ[0:FFT_SIZE-2]; //I and Q twiddles
 reg [FFT_SIZE_LOG+1:0] bottomIdx; //bottom twiddle idx aka partial FFT size
 reg [FFT_SIZE_LOG:0] topIdx, shift; //top twiddle index and shift in current stage
+reg [FFT_SIZE_LOG:0] topBranchIdx, bottomBranchIdx, twiddleIdx; //top and bottom branch buffer indices and twiddle buffer index
 
 reg signed [WIDTH-1:0] mul1I, mul1Q, mul2I, mul2Q; //complex multiplier inputs
-
 wire signed [WIDTH-1:0] mulOutI, mulOutQ; //complex multiplier output
 reg mulStart, mulStarted; //multiplier start signal and previous state
 wire mulReady; //multiplier ready output
@@ -32,6 +32,10 @@ reg mulPreviousReady; //previous multiplier ready state
 
 reverse #(FFT_SIZE_LOG) reverser(idx, idxreversed); //bit reverser instance
 cplxmul #(.WIDTH(WIDTH), .DECIMAL(DECIMAL)) mul(clk, mulStart, mul1I, mul1Q, mul2I, mul2Q, mulReady, mulOutI, mulOutQ);
+
+
+//butterfly #(.WIDTH(WIDTH), .DECIMAL(DECIMAL), .MAX_FFT_SIZE(FFT_SIZE), .MAX_FFT_SIZE_LOG(FFT_SIZE_LOG))
+//    butterfly(clk, mulStart, mulReady, mul1I, mul1Q, mul2I, mul2Q, twiddleI, twiddleQ, topBranchIdx, bottomBranchIdx);
 
 //calculate twiddles
 integer i, j, k;
@@ -66,17 +70,28 @@ begin
         CALCULATING: begin
             if(topIdx < (bottomIdx >> 1)) begin
                 //actual FFT calculation
+
+                topBranchIdx = shift + topIdx;
+                bottomBranchIdx = shift + (bottomIdx >> 1) + topIdx; 
                 
                 if(mulStarted == 1'b0)
                 begin
-                    //multiply lower branch by twiddle
-                    tempI <= dataI[shift + topIdx];
-                    tempQ <= dataQ[shift + topIdx];
+                    twiddleIdx = (bottomIdx >> 1) + topIdx - 1;
+                    //store top branch values
+                    tempI <= dataI[topBranchIdx];
+                    tempQ <= dataQ[topBranchIdx];
                     
-                    mul1I <= dataI[shift + (bottomIdx >> 1) + topIdx];
-                    mul1Q <= dataQ[shift + (bottomIdx >> 1) + topIdx];
-                    mul2I <= twiddleI[(bottomIdx >> 1) + topIdx - 1];
-                    mul2Q <= twiddleQ[(bottomIdx >> 1) + topIdx - 1];
+                    //multiply bottom branch by twiddle
+                    mul1I <= dataI[bottomBranchIdx];
+                    mul1Q <= dataQ[bottomBranchIdx];
+                    mul2I <= twiddleI[twiddleIdx];
+                    mul2Q <= twiddleQ[twiddleIdx];
+
+//                    mul1I <= dataI[topBranchIdx];
+//                    mul1Q <= dataQ[topBranchIdx];
+//                    mul2I <= dataI[bottomBranchIdx];
+//                    mul2Q <= dataQ[bottomBranchIdx];
+
                     mulStart <= 1'b1;
                     mulStarted <= 1'b1;
                  end
@@ -85,14 +100,22 @@ begin
                     mulStart <= 1'b0;
                     mulStarted <= 1'b0;
                     
-                    dataI[shift + (bottomIdx >> 1) + topIdx] = mulOutI;
-                    dataQ[shift + (bottomIdx >> 1) + topIdx] = mulOutQ;
+                    //replace bottom branch values after multiplication
+                    dataI[bottomBranchIdx] = mulOutI;
+                    dataQ[bottomBranchIdx] = mulOutQ;
                     
-                    dataI[shift + topIdx] <= dataI[shift + topIdx] + dataI[shift + (bottomIdx >> 1) + topIdx];
-                    dataQ[shift + topIdx] <= dataQ[shift + topIdx] + dataQ[shift + (bottomIdx >> 1) + topIdx];
+                    //add bottom branch to top branch
+                    dataI[topBranchIdx] <= dataI[topBranchIdx] + dataI[bottomBranchIdx];
+                    dataQ[topBranchIdx] <= dataQ[topBranchIdx] + dataQ[bottomBranchIdx];
                     
-                    dataI[shift + (bottomIdx >> 1) + topIdx] <= tempI - dataI[shift + (bottomIdx >> 1) + topIdx];
-                    dataQ[shift + (bottomIdx >> 1) + topIdx] <= tempQ - dataQ[shift + (bottomIdx >> 1) + topIdx];
+                    //negate bottom branch and add the original top branch to it
+                    dataI[bottomBranchIdx] <= tempI - dataI[bottomBranchIdx];
+                    dataQ[bottomBranchIdx] <= tempQ - dataQ[bottomBranchIdx];
+                    
+//                    dataI[topBranchIdx] <= mul1I;
+//                    dataQ[topBranchIdx] <= mul1Q;
+//                    dataI[bottomBranchIdx] <= mul2I;
+//                    dataQ[bottomBranchIdx] <= mul2Q;
                     
                     topIdx <= topIdx + 1;
                  end

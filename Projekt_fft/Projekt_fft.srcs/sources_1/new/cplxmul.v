@@ -16,9 +16,11 @@ module cplxmul #(parameter WIDTH = 12, parameter DECIMAL = 10)(
 //then the output is [k+a(c-d)]+j[k+b(c+d)]
 //3 multiplications instead of 4
 
+//TODO: might do additions and subtractions asynchronously with "assign" (though more register will be used)
+
 reg lastStartState;
 reg [3:0] state;
-parameter IDLE = 0, COMMON_MUL = 1, REAL_SUM = 2, REAL_MUL = 3, REAL_SHIFT = 4, IMAG_SUM = 5, IMAG_MUL = 6, IMAG_SHIFT = 7, IMAG_OUT = 8;
+localparam IDLE = 0, COMMON_MUL = 1, REAL_SUM = 2, REAL_MUL = 3, REAL_SHIFT = 4, IMAG_SUM = 5, IMAG_MUL = 6, IMAG_SHIFT = 7, IMAG_OUT = 8;
 
 reg signed [WIDTH-1:0] sum, mulShifted;
 reg signed [2*WIDTH-1:0] mul;
