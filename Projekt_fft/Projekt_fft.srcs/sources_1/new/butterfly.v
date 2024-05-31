@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module butterfly #(parameter MAX_FFT_SIZE = 8, parameter MAX_FFT_SIZE_LOG = 3, parameter WIDTH = 12, parameter DECIMAL = 10)(
+module butterfly #(parameter MAX_FFT_SIZE = 8, parameter MAX_FFT_SIZE_LOG = 3, parameter WIDTH = 18, parameter DECIMAL = 10)(
 input clk, 
 input start, 
 output reg ready, 

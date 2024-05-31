@@ -1,21 +1,22 @@
 `timescale 1ns / 1ps
 
 
-module fft #(parameter FFT_SIZE = 8, parameter FFT_SIZE_LOG = 3, parameter WIDTH = 12, parameter DECIMAL = 10)(
+module fft #(parameter FFT_SIZE = 8, parameter FFT_SIZE_LOG = 3, parameter WIDTH = 18, parameter DECIMAL = 10)(
 input clk, 
 input reset, 
 input start, 
 output reg ready, 
-input data_clk, 
-input signed [WIDTH-1:0] data_in_R,
-input signed [WIDTH-1:0] data_in_I, 
-output reg signed [WIDTH-1:0] data_out);
-
+input signed [(FFT_SIZE*WIDTH)-1:0] data_in_R,
+input signed [(FFT_SIZE*WIDTH)-1:0] data_in_I, 
+output reg signed [(FFT_SIZE*WIDTH)-1:0] data_out_R,
+output reg signed [(FFT_SIZE*WIDTH)-1:0] data_out_I
+);
 localparam PI = 3.14159265359;
 
 reg [3:0] state; //current coprocessor state
 localparam IDLE = 0, CLOCKING_IN = 1, CALCULATING = 2, CLOCKING_OUT = 3;
 reg [FFT_SIZE_LOG-1:0] idx; //index when clocking samples in
+reg [FFT_SIZE_LOG:0] idx_dec; 
 wire [FFT_SIZE_LOG-1:0] idxreversed; //bit-reversed index input
 reg [FFT_SIZE_LOG:0] outIdx; //index when clocking samples out
 reg signed [WIDTH-1:0] dataI[0:FFT_SIZE-1], dataQ[0:FFT_SIZE-1]; //data buffer
@@ -64,10 +65,25 @@ begin
         IDLE: begin
             ready <= 0;
             idx <= 0;
+            idx_dec <= FFT_SIZE;
             if(start == 1)
             begin
                 state <= CLOCKING_IN;
             end
+        end
+        CLOCKING_IN: begin
+           dataI[idxreversed] <= data_in_R[(idx_dec*WIDTH-1)-:WIDTH];
+           dataQ[idxreversed] <= data_in_I[(idx_dec*WIDTH-1)-:WIDTH];
+           if(idx == FFT_SIZE - 1)
+           begin
+                state <= CALCULATING;
+                bottomIdx <= 2;
+                topIdx <= 0;
+                shift <= 0;
+           end
+           else
+                idx = idx + 1;
+                idx_dec = idx_dec - 1; 
         end
         CALCULATING: begin
             if(topIdx < (bottomIdx >> 1)) begin
@@ -116,47 +132,26 @@ begin
                     else begin
                         ready <= 1;
                         outIdx <= 0;
+                        idx_dec <= FFT_SIZE;
                         state <= CLOCKING_OUT;
                      end
                 end
             end
         end
-    endcase
-end
-
-//data shift operations on data clock edge
-always @(posedge data_clk)
-begin
-    case(state)
-        CLOCKING_IN: begin
-           dataI[idxreversed] <= data_in_R;
-           dataQ[idxreversed] <= data_in_I;
-           if(idx == FFT_SIZE - 1)
-           begin
-                state <= CALCULATING;
-                bottomIdx <= 2;
-                topIdx <= 0;
-                shift <= 0;
-           end
-           else
-                idx = idx + 1; 
-        end
         CLOCKING_OUT: begin
-           if(outIdx & 1)
-                data_out = dataQ[outIdx >> 1];
-           else
-                data_out = dataI[outIdx >> 1];
+           data_out_R[(idx_dec*WIDTH-1)-:WIDTH] = dataI[outIdx];
+           data_out_I[(idx_dec*WIDTH-1)-:WIDTH] = dataQ[outIdx];
+           
            if(outIdx == (2*FFT_SIZE) - 1) begin
                 state <= IDLE;
                 ready <= 0;
            end
            else
-                outIdx = outIdx + 1; 
+                outIdx = outIdx + 1;
+                idx_dec = idx_dec - 1; 
         end
     endcase
 end
-
-
 
 always @(posedge reset)
 begin

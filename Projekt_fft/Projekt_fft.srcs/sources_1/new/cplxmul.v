@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 //complex fixed-point multiplier
-module cplxmul #(parameter WIDTH = 12, parameter DECIMAL = 10)(
+module cplxmul #(parameter WIDTH = 18, parameter DECIMAL = 10)(
     input clk,
     input start,
     input signed [WIDTH-1:0] in1r, input signed [WIDTH-1:0] in1i,
