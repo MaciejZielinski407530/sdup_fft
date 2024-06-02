@@ -19,7 +19,7 @@ reg signed [(`N*`W)-1:0] outbuffer_I;
 reg signed [(`N*`W)-1:0] inbuffer_R;
 reg signed [(`N*`W)-1:0] inbuffer_I;
 
-integer i, j;
+integer i;
 
 fft #(.FFT_SIZE(`N), .FFT_SIZE_LOG(`r), .WIDTH(`W), .DECIMAL(`D)) fft (clk, reset, start, ready, inbuffer_R, inbuffer_I, outbuffer_R, outbuffer_I);
 
