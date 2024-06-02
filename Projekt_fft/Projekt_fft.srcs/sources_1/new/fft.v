@@ -13,6 +13,7 @@ output reg signed [(FFT_SIZE*WIDTH)-1:0] data_out_I
 );
 localparam PI = 3.14159265359;
 
+reg lastStartState;
 reg [3:0] state; //current coprocessor state
 localparam IDLE = 0, CLOCKING_IN = 1, CALCULATING = 2, CLOCKING_OUT = 3;
 reg [FFT_SIZE_LOG-1:0] idx; //index when clocking samples in
@@ -57,6 +58,8 @@ initial begin
     butterflyStart = 1'b0;
     butterflyStarted = 1'b0;
     butterflyPreviousReady = 1'b0;
+    lastStartState = 1'b0;
+    ready = 1'b0;
     k = 0;
     for(i = 2; i <= FFT_SIZE; i = i << 1) begin
         for(j = 0; j < (i / 2); j = j + 1) begin
@@ -76,8 +79,9 @@ begin
             ready <= 0;
             idx <= 0;
             idx_dec <= FFT_SIZE;
-            if(start == 1)
+            if((start == 1'b1) && (lastStartState == 1'b0))
             begin
+                ready <= 1'b0;
                 state <= CLOCKING_IN;
             end
         end
@@ -156,13 +160,13 @@ begin
            
            if(outIdx == (FFT_SIZE - 1)) begin
                 state <= IDLE;
-                ready <= 0;
            end
            else
                 outIdx = outIdx + 1;
                 idx_dec = idx_dec - 1; 
         end
     endcase
+    lastStartState <= start;
 end
 
 always @(posedge reset)
