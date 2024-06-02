@@ -50,7 +50,6 @@ generate
 endgenerate
 
 
-
 //calculate twiddles
 integer i, j, k;
 initial begin
@@ -68,7 +67,6 @@ initial begin
             k = k + 1;
         end
     end
-    
 end
 
 //internal operations on clock edge

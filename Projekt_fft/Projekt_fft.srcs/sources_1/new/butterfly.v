@@ -22,8 +22,6 @@ wire signed [WIDTH-1:0] mulOutR, mulOutI; //complex multiplier output
 reg mulStart; //multiplier start signal
 wire mulReady; //multiplier ready output
 reg mulPreviousReady; //previous multiplier ready state
-
-
 reg lastStartState;
 
 cplxmul #(.WIDTH(WIDTH), .DECIMAL(DECIMAL)) mul(clk, mulStart, mul1R, mul1I, mul2R, mul2I, mulReady, mulOutR, mulOutI);
@@ -49,8 +47,10 @@ begin
         //multiply bottom branch by twiddle
         mul1R <= bottomR;
         mul1I <= bottomI;
+
         mul2R <= twiddleR;
         mul2I <= twiddleI;
+
         mulStart <= 1'b1;
      end
      else if((mulReady == 1'b1) && (mulPreviousReady == 1'b0)) //mulStarted == 1 and mulReady = 1 and mulPreviousReady = 0
