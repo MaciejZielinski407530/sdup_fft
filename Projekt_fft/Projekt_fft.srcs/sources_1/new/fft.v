@@ -12,6 +12,7 @@ output reg signed [(FFT_SIZE*WIDTH)-1:0] data_out_R,
 output reg signed [(FFT_SIZE*WIDTH)-1:0] data_out_I
 );
 localparam PI = 3.14159265359;
+`define MOD2(dividend, divisor) ((dividend) & ((divisor) - 1))
 
 reg [3:0] state; //current coprocessor state
 localparam IDLE = 0, CLOCKING_IN = 1, CALCULATING = 2, CLOCKING_OUT = 3;
@@ -22,31 +23,37 @@ reg [FFT_SIZE_LOG:0] outIdx; //index when clocking samples out
 reg signed [WIDTH-1:0] dataI[0:FFT_SIZE-1], dataQ[0:FFT_SIZE-1]; //data buffer
 reg signed [WIDTH-1:0] tempI, tempQ; //temporary buffer when multiplying
 reg signed [WIDTH-1:0] twiddleI[0:FFT_SIZE-2], twiddleQ[0:FFT_SIZE-2]; //I and Q twiddles
-reg [FFT_SIZE_LOG+1:0] bottomIdx; //bottom twiddle idx aka partial FFT size
-reg [FFT_SIZE_LOG:0] topIdx, shift; //top twiddle index and shift in current stage
-reg [FFT_SIZE_LOG:0] topBranchIdx, bottomBranchIdx, twiddleIdx; //top and bottom branch buffer indices and twiddle buffer index
+reg [FFT_SIZE_LOG+1:0] partialFftSize; //bottom twiddle idx aka partial FFT size
+reg [FFT_SIZE_LOG:0] twiddleIdx; //top and bottom branch buffer indices and twiddle buffer index
 
 
-reg signed [WIDTH-1:0] mul1I, mul1Q, mul2I, mul2Q; //butterfly inputs
-wire signed [WIDTH-1:0] mul1I_out, mul1Q_out, mul2I_out, mul2Q_out; //butterfly outputs
-
-reg butterflyStart, butterflyStarted; //multiplier start signal and previous state
-wire butterflyReady; //multiplier ready output
-reg butterflyPreviousReady; //previous multiplier ready state
+reg signed [WIDTH-1:0] but1I[0:FFT_SIZE/2-1], but1Q[0:FFT_SIZE/2-1], but2I[0:FFT_SIZE/2-1], but2Q[0:FFT_SIZE/2-1]; //butterfly inputs
+reg signed [WIDTH-1:0] butTwiddleI[0:FFT_SIZE/2-1], butTwiddleQ[0:FFT_SIZE/2-1];
+wire signed [WIDTH-1:0] but1I_out[0:FFT_SIZE/2-1], but1Q_out[0:FFT_SIZE/2-1], but2I_out[0:FFT_SIZE/2-1], but2Q_out[0:FFT_SIZE/2-1]; //butterfly outputs
+reg butterflyStart, butterflyStarted; //butterfly start signal and previous state
+wire butterflyReady[0:FFT_SIZE/2-1]; //butterfly ready output
+reg butterflyPreviousReady; //previous butterfly ready state
 
 reverse #(FFT_SIZE_LOG) reverser(idx, idxreversed); //bit reverser instance
 
-butterfly #(.WIDTH(WIDTH), .DECIMAL(DECIMAL), .MAX_FFT_SIZE(FFT_SIZE), .MAX_FFT_SIZE_LOG(FFT_SIZE_LOG))
-    butterfly(clk, butterflyStart, butterflyReady, mul1I, mul1Q, mul2I, mul2Q, twiddleI[twiddleIdx], twiddleQ[twiddleIdx],mul1I_out, mul1Q_out, mul2I_out, mul2Q_out);
+genvar m;
+generate
+    for(m = 0; m < (FFT_SIZE / 2); m = m + 1) begin : butterfly_generator
+        butterfly #(.WIDTH(WIDTH), .DECIMAL(DECIMAL), .MAX_FFT_SIZE(FFT_SIZE), .MAX_FFT_SIZE_LOG(FFT_SIZE_LOG))
+            butterfly(clk, butterflyStart, butterflyReady[m], but1I[m], but1Q[m], but2I[m], but2Q[m], 
+            butTwiddleI[m], butTwiddleQ[m], but1I_out[m], but1Q_out[m], but2I_out[m], but2Q_out[m]);
+    end
+endgenerate
+
+
 
 //calculate twiddles
 integer i, j, k;
 initial begin
+    state = IDLE;
     butterflyStart = 1'b0;
     butterflyStarted = 1'b0;
     butterflyPreviousReady = 1'b0;
-    state = IDLE;
-
     k = 0;
     for(i = 2; i <= FFT_SIZE; i = i << 1) begin
         for(j = 0; j < (i / 2); j = j + 1) begin
@@ -77,72 +84,70 @@ begin
            if(idx == FFT_SIZE - 1)
            begin
                 state <= CALCULATING;
-                bottomIdx <= 2;
-                topIdx <= 0;
-                shift <= 0;
+                partialFftSize <= 2;
            end
            else
                 idx = idx + 1;
                 idx_dec = idx_dec - 1; 
         end
         CALCULATING: begin
-            if(topIdx < (bottomIdx >> 1)) begin
-                //actual FFT calculation
+            //actual FFT calculation
+            
 
-                topBranchIdx = shift + topIdx;
-                bottomBranchIdx = shift + (bottomIdx >> 1) + topIdx; 
+            if(butterflyStarted == 1'b0)
+            begin
                 
-                if(butterflyStarted == 1'b0)
+                //loop for all butterflies
+                for(i = 0; i < (FFT_SIZE / 2); i = i + 1) 
                 begin
-                    twiddleIdx = (bottomIdx >> 1) + topIdx - 1;
-
-                    mul1I <= dataI[topBranchIdx];
-                    mul1Q <= dataQ[topBranchIdx];
-                    mul2I <= dataI[bottomBranchIdx];
-                    mul2Q <= dataQ[bottomBranchIdx];
-
-                    butterflyStart <= 1'b1;
-                    butterflyStarted <= 1'b1;
-                 end
-                 else if((butterflyReady == 1'b1) && (butterflyPreviousReady == 1'b0)) //butterflyStarted == 1 and butterflyReady = 1 and butterflyPreviousReady = 0
-                 begin
-                    butterflyStart <= 1'b0;
-                    butterflyStarted <= 1'b0;               
+                    //assume n is the partial FFT size and i is the butterfly index (starting from 0)
+                    //then the input shift within each substage is i % (n / 2), so basically we wrap the butterfly index around
+                    //also, there is an additional shift depended on current substage
+                    //this shift is given as (i / (n / 2)) * n, because there are n/2 butterflies in each substage
+                    //look at the butterfly diagram to understand it better
+                    //since n is always a power of 2, the code is optimized to use bit manipulation instead of integer arithmetics
+                    but1I[i] <= dataI[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize)];
+                    but1Q[i] <= dataQ[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize)];
+                    but2I[i] <= dataI[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize) + (partialFftSize / 2)];
+                    but2Q[i] <= dataQ[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize) + (partialFftSize / 2)];
                     
-                    dataI[topBranchIdx] <= mul1I_out;
-                    dataQ[topBranchIdx] <= mul1Q_out;
-                    dataI[bottomBranchIdx] <= mul2I_out;
-                    dataQ[bottomBranchIdx] <= mul2Q_out;
-                    
-                    topIdx <= topIdx + 1;
+                    butTwiddleI[i] <= twiddleI[((partialFftSize / 2) - 1) + (i % (partialFftSize / 2))];
+                    butTwiddleQ[i] <= twiddleQ[((partialFftSize / 2) - 1) + (i % (partialFftSize / 2))];
+                end
+
+    
+                butterflyStart <= 1'b1;
+                butterflyStarted <= 1'b1;
+             end
+             else if((butterflyReady[0] == 1'b1) && (butterflyPreviousReady == 1'b0)) //butterflyStarted == 1 and butterflyReady = 1 and butterflyPreviousReady = 0
+             begin
+                butterflyStart <= 1'b0;
+                butterflyStarted <= 1'b0;            
+                   
+                //loop for all butterflies
+                for(i = 0; i < (FFT_SIZE / 2); i = i + 1) 
+                begin
+                    dataI[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize)] <= but1I_out[i];
+                    dataQ[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize)] <= but1Q_out[i];
+                    dataI[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize) + (partialFftSize / 2)] <= but2I_out[i];
+                    dataQ[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize) + (partialFftSize / 2)] <= but2Q_out[i];
+                end
+                
+                partialFftSize = partialFftSize << 1;
+                if(partialFftSize > FFT_SIZE) begin
+                    ready <= 1;
+                    outIdx <= 0;
+                    idx_dec <= FFT_SIZE;
+                    state <= CLOCKING_OUT;
                  end
-                 butterflyPreviousReady <= butterflyReady;
-            end 
-            else begin
-                shift = shift + bottomIdx;
-                if(shift < FFT_SIZE) begin
-                    topIdx <= 0;
-                end
-                else begin
-                    bottomIdx = bottomIdx << 1;
-                    if(bottomIdx <= FFT_SIZE) begin
-                        shift <= 0;
-                        topIdx <= 0;
-                    end
-                    else begin
-                        ready <= 1;
-                        outIdx <= 0;
-                        idx_dec <= FFT_SIZE;
-                        state <= CLOCKING_OUT;
-                     end
-                end
-            end
+             end
+             butterflyPreviousReady <= butterflyReady[0];
         end
         CLOCKING_OUT: begin
            data_out_R[(idx_dec*WIDTH-1)-:WIDTH] = dataI[outIdx];
            data_out_I[(idx_dec*WIDTH-1)-:WIDTH] = dataQ[outIdx];
            
-           if(outIdx == (2*FFT_SIZE) - 1) begin
+           if(outIdx == (FFT_SIZE - 1)) begin
                 state <= IDLE;
                 ready <= 0;
            end
