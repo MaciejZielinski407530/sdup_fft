@@ -12,7 +12,6 @@ output reg signed [(FFT_SIZE*WIDTH)-1:0] data_out_R,
 output reg signed [(FFT_SIZE*WIDTH)-1:0] data_out_I
 );
 localparam PI = 3.14159265359;
-`define MOD2(dividend, divisor) ((dividend) & ((divisor) - 1))
 
 reg [3:0] state; //current coprocessor state
 localparam IDLE = 0, CLOCKING_IN = 1, CALCULATING = 2, CLOCKING_OUT = 3;
@@ -23,9 +22,12 @@ reg [FFT_SIZE_LOG:0] outIdx; //index when clocking samples out
 reg signed [WIDTH-1:0] dataI[0:FFT_SIZE-1], dataQ[0:FFT_SIZE-1]; //data buffer
 reg signed [WIDTH-1:0] tempI, tempQ; //temporary buffer when multiplying
 reg signed [WIDTH-1:0] twiddleI[0:FFT_SIZE-2], twiddleQ[0:FFT_SIZE-2]; //I and Q twiddles
-reg [FFT_SIZE_LOG+1:0] partialFftSize; //bottom twiddle idx aka partial FFT size
-reg [FFT_SIZE_LOG:0] twiddleIdx; //top and bottom branch buffer indices and twiddle buffer index
-
+reg [7:0] partialFftSizeBit; //partial FFT size bit shift = r, where 2**r=N
+wire [FFT_SIZE_LOG+1:0] partialFftSize; //partial FFT size (N)
+wire [FFT_SIZE_LOG-1:0] partialFftSizeHalved, partialFftSizeHalvedMask; //partial FFT size / 2 and partial (FFT size / 2) - 1
+assign partialFftSize = 1 << partialFftSizeBit;
+assign partialFftSizeHalved = partialFftSize >> 1;
+assign partialFftSizeHalvedMask = partialFftSizeHalved - 1;
 
 reg signed [WIDTH-1:0] but1I[0:FFT_SIZE/2-1], but1Q[0:FFT_SIZE/2-1], but2I[0:FFT_SIZE/2-1], but2Q[0:FFT_SIZE/2-1]; //butterfly inputs
 reg signed [WIDTH-1:0] butTwiddleI[0:FFT_SIZE/2-1], butTwiddleQ[0:FFT_SIZE/2-1];
@@ -33,6 +35,7 @@ wire signed [WIDTH-1:0] but1I_out[0:FFT_SIZE/2-1], but1Q_out[0:FFT_SIZE/2-1], bu
 reg butterflyStart, butterflyStarted; //butterfly start signal and previous state
 wire butterflyReady[0:FFT_SIZE/2-1]; //butterfly ready output
 reg butterflyPreviousReady; //previous butterfly ready state
+reg [FFT_SIZE_LOG:0] inputIdx;
 
 reverse #(FFT_SIZE_LOG) reverser(idx, idxreversed); //bit reverser instance
 
@@ -84,7 +87,7 @@ begin
            if(idx == FFT_SIZE - 1)
            begin
                 state <= CALCULATING;
-                partialFftSize <= 2;
+                partialFftSizeBit <= 1;
            end
            else
                 idx = idx + 1;
@@ -93,7 +96,7 @@ begin
         CALCULATING: begin
             //actual FFT calculation
             
-
+            
             if(butterflyStarted == 1'b0)
             begin
                 
@@ -106,13 +109,15 @@ begin
                     //this shift is given as (i / (n / 2)) * n, because there are n/2 butterflies in each substage
                     //look at the butterfly diagram to understand it better
                     //since n is always a power of 2, the code is optimized to use bit manipulation instead of integer arithmetics
-                    but1I[i] <= dataI[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize)];
-                    but1Q[i] <= dataQ[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize)];
-                    but2I[i] <= dataI[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize) + (partialFftSize / 2)];
-                    but2Q[i] <= dataQ[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize) + (partialFftSize / 2)];
+                    inputIdx = (i & partialFftSizeHalvedMask) + ((i >> (partialFftSizeBit - 1)) << partialFftSizeBit);
                     
-                    butTwiddleI[i] <= twiddleI[((partialFftSize / 2) - 1) + (i % (partialFftSize / 2))];
-                    butTwiddleQ[i] <= twiddleQ[((partialFftSize / 2) - 1) + (i % (partialFftSize / 2))];
+                    but1I[i] <= dataI[inputIdx];
+                    but1Q[i] <= dataQ[inputIdx];
+                    but2I[i] <= dataI[inputIdx + partialFftSizeHalved];
+                    but2Q[i] <= dataQ[inputIdx + partialFftSizeHalved];
+                    
+                    butTwiddleI[i] <= twiddleI[partialFftSizeHalvedMask + (i & partialFftSizeHalvedMask)];
+                    butTwiddleQ[i] <= twiddleQ[partialFftSizeHalvedMask + (i & partialFftSizeHalvedMask)];
                 end
 
     
@@ -127,14 +132,16 @@ begin
                 //loop for all butterflies
                 for(i = 0; i < (FFT_SIZE / 2); i = i + 1) 
                 begin
-                    dataI[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize)] <= but1I_out[i];
-                    dataQ[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize)] <= but1Q_out[i];
-                    dataI[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize) + (partialFftSize / 2)] <= but2I_out[i];
-                    dataQ[(i % (partialFftSize / 2)) + ((i / (partialFftSize / 2)) * partialFftSize) + (partialFftSize / 2)] <= but2Q_out[i];
+                    inputIdx = (i & partialFftSizeHalvedMask) + ((i >> (partialFftSizeBit - 1)) << partialFftSizeBit);
+                
+                    dataI[inputIdx] <= but1I_out[i];
+                    dataQ[inputIdx] <= but1Q_out[i];
+                    dataI[inputIdx + partialFftSizeHalved] <= but2I_out[i];
+                    dataQ[inputIdx + partialFftSizeHalved] <= but2Q_out[i];
                 end
                 
-                partialFftSize = partialFftSize << 1;
-                if(partialFftSize > FFT_SIZE) begin
+                partialFftSizeBit = partialFftSizeBit + 1;
+                if(partialFftSizeBit > FFT_SIZE_LOG) begin
                     ready <= 1;
                     outIdx <= 0;
                     idx_dec <= FFT_SIZE;
