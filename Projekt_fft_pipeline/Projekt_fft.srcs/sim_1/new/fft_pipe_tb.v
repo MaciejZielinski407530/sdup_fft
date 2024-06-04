@@ -3,6 +3,7 @@
 module fft_pipe_tb;
 `include "config.v"
 parameter WIDTH =18;
+parameter N = 8;
 reg clk, reset;
 reg [3:0] start;
 wire ready;
@@ -41,7 +42,7 @@ reg signed [WIDTH-1:0] I6_out;
 reg signed [WIDTH-1:0] I7_out;
 
 
-fft_p FFT_COUNT (clk, reset, start, {R0_in,R1_in,R2_in,R3_in,R4_in,R5_in,R6_in,R7_in},{I0_in,I1_in,I2_in,I3_in,I4_in,I5_in,I6_in,I7_in},
+fft_p #(.FFT_SIZE(N)) FFT_COUNT (clk, reset, start, {R0_in,R1_in,R2_in,R3_in,R4_in,R5_in,R6_in,R7_in},{I0_in,I1_in,I2_in,I3_in,I4_in,I5_in,I6_in,I7_in},
                 {R0_out,R1_out,R2_out,R3_out,R4_out,R5_out,R6_out,R7_out},{I0_out,I1_out,I2_out,I3_out,I4_out,I5_out,I6_out,I7_out},ready);
 
 //Clock generator
