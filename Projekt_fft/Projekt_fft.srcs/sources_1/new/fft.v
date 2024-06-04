@@ -6,10 +6,10 @@ input clk,
 input reset, 
 input start, 
 output reg ready, 
-input signed [(FFT_SIZE*WIDTH)-1:0] data_in_R,
-input signed [(FFT_SIZE*WIDTH)-1:0] data_in_I, 
-output reg signed [(FFT_SIZE*WIDTH)-1:0] data_out_R,
-output reg signed [(FFT_SIZE*WIDTH)-1:0] data_out_I
+input signed [WIDTH-1:0] data_in_R,
+input signed [WIDTH-1:0] data_in_I, 
+output reg signed [WIDTH-1:0] data_out_R,
+output reg signed [WIDTH-1:0] data_out_I
 );
 localparam PI = 3.14159265359;
 
@@ -17,7 +17,6 @@ reg lastStartState;
 reg [3:0] state; //current coprocessor state
 localparam IDLE = 0, CLOCKING_IN = 1, CALCULATING = 2, CLOCKING_OUT = 3;
 reg [FFT_SIZE_LOG-1:0] idx; //index when clocking samples in
-reg [FFT_SIZE_LOG:0] idx_dec; 
 wire [FFT_SIZE_LOG-1:0] idxreversed; //bit-reversed index input
 reg [FFT_SIZE_LOG:0] outIdx; //index when clocking samples out
 reg signed [WIDTH-1:0] dataI[0:FFT_SIZE-1], dataQ[0:FFT_SIZE-1]; //data buffer
@@ -72,11 +71,16 @@ end
 //internal operations on clock edge
 always @(posedge clk)
 begin
+    if(reset == 1'b1) begin
+        state <= IDLE;
+        ready <= 0;
+        idx <= 0;
+    end
+    
     case(state)
         IDLE: begin
             ready <= 0;
             idx <= 0;
-            idx_dec <= FFT_SIZE;
             if((start == 1'b1) && (lastStartState == 1'b0))
             begin
                 ready <= 1'b0;
@@ -84,8 +88,8 @@ begin
             end
         end
         CLOCKING_IN: begin
-           dataI[idxreversed] <= data_in_R[(idx_dec*WIDTH-1)-:WIDTH];
-           dataQ[idxreversed] <= data_in_I[(idx_dec*WIDTH-1)-:WIDTH];
+           dataI[idxreversed] <= data_in_R;
+           dataQ[idxreversed] <= data_in_I;
            if(idx == FFT_SIZE - 1)
            begin
                 state <= CALCULATING;
@@ -93,7 +97,6 @@ begin
            end
            else
                 idx = idx + 1;
-                idx_dec = idx_dec - 1; 
         end
         CALCULATING: begin
             //actual FFT calculation
@@ -145,33 +148,26 @@ begin
                 partialFftSizeBit = partialFftSizeBit + 1;
                 if(partialFftSizeBit > FFT_SIZE_LOG) begin
                     ready <= 1;
-                    outIdx <= 0;
-                    idx_dec <= FFT_SIZE;
+                    data_out_R <= dataI[0];
+                    data_out_I <= dataQ[0];
+                    outIdx <= 1;
                     state <= CLOCKING_OUT;
                  end
              end
              butterflyPreviousReady <= butterflyReady[0];
         end
         CLOCKING_OUT: begin
-           data_out_R[(idx_dec*WIDTH-1)-:WIDTH] = dataI[outIdx];
-           data_out_I[(idx_dec*WIDTH-1)-:WIDTH] = dataQ[outIdx];
+           data_out_R = dataI[outIdx];
+           data_out_I = dataQ[outIdx];
            
            if(outIdx == (FFT_SIZE - 1)) begin
                 state <= IDLE;
            end
            else
                 outIdx = outIdx + 1;
-                idx_dec = idx_dec - 1; 
         end
     endcase
     lastStartState <= start;
-end
-
-always @(posedge reset)
-begin
-    state <= IDLE;
-    ready <= 0;
-    idx <= 0;
 end
 
 endmodule
