@@ -13,7 +13,7 @@ integer i, k, N;
 initial begin
     N = 1<<(STAGE+1);
     k = 0;
-    for(i = 0; i <= N; i = i + 1) begin
+    for(i = 0; i < N; i = i + 1) begin
         valueR[((k+1)*WIDTH-1)-:WIDTH] = $cos(2.0 * PI * i / N) * (2**DECIMAL);
         valueI[((k+1)*WIDTH-1)-:WIDTH] = -$sin(2.0 * PI * i / N) * (2**DECIMAL);
         k = k + 1;

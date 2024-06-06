@@ -3,12 +3,11 @@
 Apr 18 2022
 16:05:34
 C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,uvm,,,,,,
-C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sim_1/new/fft_pipe_tb.v,1717345500,systemVerilog,,,C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/config.v,fft_pipe_tb,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
+C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sim_1/new/fft_pipe_tb.v,1717617772,systemVerilog,,,C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/config.v,fft_pipe_tb,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
 C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/butterfly.v,1717338085,verilog,,,,butterfly,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
 C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/config.v,1716539109,verilog,,,,,,,,,,,,
 C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/cplxmul.v,1717496332,verilog,,C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/reverse.v,,cplxmul,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
-C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/fft.v,1716927088,verilog,,C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/butterfly.v,,fft,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
-C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/fft_p.v,1717346021,systemVerilog,,,,fft_p,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
-C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/reverse.v,1717338769,verilog,,,,reverse,,,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
-C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/stageN.sv,1717344546,systemVerilog,,,,stageN,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
-C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/twiddle.v,1717344573,verilog,,C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/cplxmul.v,,twiddle,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
+C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/fft_p.v,1717615274,systemVerilog,,,,fft_p,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
+C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/reverse.v,1717656484,verilog,,,,reverse,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
+C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/stageN.sv,1717500219,systemVerilog,,,,stageN,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
+C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/twiddle.v,1717499267,verilog,,C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.srcs/sources_1/new/cplxmul.v,,twiddle,,uvm,../../../../Projekt_fft_pipeline_N.srcs/sources_1/new,,,,,
