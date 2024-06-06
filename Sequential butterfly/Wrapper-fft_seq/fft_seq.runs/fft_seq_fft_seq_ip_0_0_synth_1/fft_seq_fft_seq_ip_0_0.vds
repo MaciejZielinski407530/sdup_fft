@@ -1,0 +1,420 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Jun  6 20:33:21 2024
+# Process ID: 3808
+# Current directory: C:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.runs/fft_seq_fft_seq_ip_0_0_synth_1
+# Command line: vivado.exe -log fft_seq_fft_seq_ip_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft_seq_fft_seq_ip_0_0.tcl
+# Log file: C:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.runs/fft_seq_fft_seq_ip_0_0_synth_1/fft_seq_fft_seq_ip_0_0.vds
+# Journal file: C:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.runs/fft_seq_fft_seq_ip_0_0_synth_1\vivado.jou
+# Running On: Maciek, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 4, Host memory: 17024 MB
+#-----------------------------------------------------------
+source fft_seq_fft_seq_ip_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1284.383 ; gain = 0.000
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/macie/Desktop/SDUP/ip_repo/fft_seq_ip_3.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top fft_seq_fft_seq_ip_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7648
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1714.188 ; gain = 319.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fft_seq_fft_seq_ip_0_0' [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ip/fft_seq_fft_seq_ip_0_0/synth/fft_seq_fft_seq_ip_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'fft_seq_ip_v3_0' [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'fft_seq_ip_v3_0_S00_AXI' [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'fft' [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:80]
+INFO: [Synth 8-6157] synthesizing module 'reverse' [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:242]
+INFO: [Synth 8-6155] done synthesizing module 'reverse' (0#1) [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:242]
+INFO: [Synth 8-6157] synthesizing module 'butterfly' [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:252]
+INFO: [Synth 8-6157] synthesizing module 'cplxmul' [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:331]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:372]
+INFO: [Synth 8-6155] done synthesizing module 'cplxmul' (0#1) [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:331]
+WARNING: [Synth 8-6090] variable 'bottomR_out' is written by both blocking and non-blocking assignments, entire logic could be removed [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:318]
+WARNING: [Synth 8-6090] variable 'bottomI_out' is written by both blocking and non-blocking assignments, entire logic could be removed [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:319]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly' (0#1) [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:252]
+WARNING: [Synth 8-6090] variable 'idx' is written by both blocking and non-blocking assignments, entire logic could be removed [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:168]
+WARNING: [Synth 8-6090] variable 'shift' is written by both blocking and non-blocking assignments, entire logic could be removed [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:212]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'fft' (0#1) [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:80]
+INFO: [Synth 8-6155] done synthesizing module 'fft_seq_ip_v3_0_S00_AXI' (0#1) [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'fft_seq_ip_v3_0' (0#1) [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'fft_seq_fft_seq_ip_0_0' (0#1) [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ip/fft_seq_fft_seq_ip_0_0/synth/fft_seq_fft_seq_ip_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element topBranchIdx_reg was removed.  [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:175]
+WARNING: [Synth 8-6014] Unused sequential element bottomBranchIdx_reg was removed.  [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:176]
+WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'dataI_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: Invalid write to RAM. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "dataI_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'dataQ_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: Invalid write to RAM. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "dataQ_reg" dissolved into registers
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module fft_seq_ip_v3_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module fft_seq_ip_v3_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module fft_seq_ip_v3_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module fft_seq_ip_v3_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module fft_seq_ip_v3_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module fft_seq_ip_v3_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1811.836 ; gain = 416.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1811.836 ; gain = 416.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1811.836 ; gain = 416.906
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1811.836 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1865.953 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1883.934 ; gain = 17.980
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1883.934 ; gain = 489.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1883.934 ; gain = 489.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1883.934 ; gain = 489.004
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'cplxmul'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                REAL_MUL |                              010 |                               01
+                IMAG_MUL |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'cplxmul'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1883.934 ; gain = 489.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   24 Bit       Adders := 4     
+	   2 Input   24 Bit       Adders := 5     
+	   2 Input    4 Bit       Adders := 3     
+	   3 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
+	   3 Input    3 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 6     
+	               32 Bit    Registers := 8     
+	               24 Bit    Registers := 34    
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   2 Input  192 Bit        Muxes := 10    
+	   4 Input  192 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 7     
+	  11 Input   32 Bit        Muxes := 7     
+	   2 Input   24 Bit        Muxes := 54    
+	   8 Input   24 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 3     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 12    
+	   4 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 43    
+	   4 Input    1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:359]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:359]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:357]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:357]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:360]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.gen/sources_1/bd/fft_seq/ipshared/c6e5/hdl/fft_seq_ip_v3_0.v:360]
+DSP Report: Generating DSP mul/aMinusBtimesD0, operation Mode is: A2*B.
+DSP Report: register mul2I_reg is absorbed into DSP mul/aMinusBtimesD0.
+DSP Report: operator mul/aMinusBtimesD0 is absorbed into DSP mul/aMinusBtimesD0.
+DSP Report: operator mul/aMinusBtimesD0 is absorbed into DSP mul/aMinusBtimesD0.
+DSP Report: Generating DSP mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register mul2I_reg is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: register mul/aMinusBtimesD_reg is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: operator mul/aMinusBtimesD0 is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: operator mul/aMinusBtimesD0 is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register mul1R_reg is absorbed into DSP mul/cMinusDtimesA0.
+DSP Report: operator mul/cMinusDtimesA0 is absorbed into DSP mul/cMinusDtimesA0.
+DSP Report: operator mul/cMinusDtimesA0 is absorbed into DSP mul/cMinusDtimesA0.
+DSP Report: Generating DSP mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register mul1R_reg is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: register mul/cMinusDtimesA_reg is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: operator mul/cMinusDtimesA0 is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: operator mul/cMinusDtimesA0 is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register mul1I_reg is absorbed into DSP mul/cPlusDtimesB0.
+DSP Report: operator mul/cPlusDtimesB0 is absorbed into DSP mul/cPlusDtimesB0.
+DSP Report: operator mul/cPlusDtimesB0 is absorbed into DSP mul/cPlusDtimesB0.
+DSP Report: Generating DSP mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register mul1I_reg is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: register mul/cPlusDtimesB_reg is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: operator mul/cPlusDtimesB0 is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: operator mul/cPlusDtimesB0 is absorbed into DSP mul/cPlusDtimesB_reg.
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module fft_seq_fft_seq_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module fft_seq_fft_seq_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module fft_seq_fft_seq_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module fft_seq_fft_seq_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module fft_seq_fft_seq_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module fft_seq_fft_seq_ip_0_0 is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (mul/aMinusBtimesD_reg[9]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/aMinusBtimesD_reg[8]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/aMinusBtimesD_reg[7]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/aMinusBtimesD_reg[6]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/aMinusBtimesD_reg[5]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/aMinusBtimesD_reg[4]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/aMinusBtimesD_reg[3]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/aMinusBtimesD_reg[2]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/aMinusBtimesD_reg[1]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/aMinusBtimesD_reg[0]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cMinusDtimesA_reg[9]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cMinusDtimesA_reg[8]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cMinusDtimesA_reg[7]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cMinusDtimesA_reg[6]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cMinusDtimesA_reg[5]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cMinusDtimesA_reg[4]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cMinusDtimesA_reg[3]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cMinusDtimesA_reg[2]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cMinusDtimesA_reg[1]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cMinusDtimesA_reg[0]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cPlusDtimesB_reg[9]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cPlusDtimesB_reg[8]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cPlusDtimesB_reg[7]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cPlusDtimesB_reg[6]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cPlusDtimesB_reg[5]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cPlusDtimesB_reg[4]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cPlusDtimesB_reg[3]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cPlusDtimesB_reg[2]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cPlusDtimesB_reg[1]) is unused and will be removed from module butterfly.
+WARNING: [Synth 8-3332] Sequential element (mul/cPlusDtimesB_reg[0]) is unused and will be removed from module butterfly.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1904.652 ; gain = 509.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|butterfly   | A2*B            | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|butterfly   | (PCIN>>17)+A2*B | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|butterfly   | A2*B            | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|butterfly   | (PCIN>>17)+A2*B | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|butterfly   | A2*B            | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|butterfly   | (PCIN>>17)+A2*B | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 2414.512 ; gain = 1019.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2414.512 ; gain = 1019.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 2475.980 ; gain = 1081.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 2490.270 ; gain = 1095.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 2490.270 ; gain = 1095.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 2490.270 ; gain = 1095.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 2490.270 ; gain = 1095.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 2490.270 ; gain = 1095.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 2490.270 ; gain = 1095.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|butterfly   | A'*B              | 30     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|butterfly   | (PCIN>>17+A'*B)'  | 30     | 18     | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|butterfly   | A''*B             | 30     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|butterfly   | (PCIN>>17+A''*B)' | 30     | 18     | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|butterfly   | A''*B             | 30     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|butterfly   | (PCIN>>17+A''*B)' | 30     | 18     | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |    33|
+|2     |DSP_ALU         |     6|
+|3     |DSP_A_B_DATA    |     6|
+|5     |DSP_C_DATA      |     6|
+|6     |DSP_MULTIPLIER  |     6|
+|7     |DSP_M_DATA      |     6|
+|8     |DSP_OUTPUT      |     6|
+|10    |DSP_PREADD      |     6|
+|11    |DSP_PREADD_DATA |     6|
+|12    |LUT1            |     6|
+|13    |LUT2            |   286|
+|14    |LUT3            |    17|
+|15    |LUT4            |   355|
+|16    |LUT5            |   662|
+|17    |LUT6            |   785|
+|18    |MUXF7           |   144|
+|19    |FDRE            |  1099|
+|20    |FDSE            |     2|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 2490.270 ; gain = 1095.340
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 43 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:01:10 . Memory (MB): peak = 2490.270 ; gain = 1023.242
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:13 . Memory (MB): peak = 2490.270 ; gain = 1095.340
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 2502.621 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 183 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2518.512 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 6 instances
+
+Synth Design complete, checksum: 7f5b3907
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 59 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:28 . Memory (MB): peak = 2518.512 ; gain = 1234.129
+INFO: [Common 17-1381] The checkpoint 'C:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.runs/fft_seq_fft_seq_ip_0_0_synth_1/fft_seq_fft_seq_ip_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP fft_seq_fft_seq_ip_0_0, cache-ID = ca6ad80689ee30ce
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/fft_seq/fft_seq.runs/fft_seq_fft_seq_ip_0_0_synth_1/fft_seq_fft_seq_ip_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fft_seq_fft_seq_ip_0_0_utilization_synth.rpt -pb fft_seq_fft_seq_ip_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  6 20:35:05 2024...

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Jun  6 19:17:48 2024
+# Process ID: 16120
+# Current directory: C:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/Projekt_fft/Projekt_fft.runs/synth_1
+# Command line: vivado.exe -log fft.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft.tcl
+# Log file: C:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/Projekt_fft/Projekt_fft.runs/synth_1/fft.vds
+# Journal file: C:/Users/macie/Desktop/SDUP/Sekwencyjny_1_motyl/Projekt_fft/Projekt_fft.runs/synth_1\vivado.jou
+# Running On: Maciek, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 4, Host memory: 17024 MB
+#-----------------------------------------------------------
+source fft.tcl -notrace
