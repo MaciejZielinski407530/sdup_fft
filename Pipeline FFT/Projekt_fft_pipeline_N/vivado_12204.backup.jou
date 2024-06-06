@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Jun  6 08:41:10 2024
+# Process ID: 12204
+# Current directory: C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10812 C:\Users\macie\Desktop\SDUP\Projekt_fft_pipeline_N\Projekt_fft_pipeline_N.xpr
+# Log file: C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/vivado.log
+# Journal file: C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N\vivado.jou
+# Running On: Maciek, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 4, Host memory: 17024 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/macie/Desktop/SDUP/Projekt_fft_pipeline_N/Projekt_fft_pipeline_N.xpr
+launch_simulation
+source fft_pipe_tb.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim

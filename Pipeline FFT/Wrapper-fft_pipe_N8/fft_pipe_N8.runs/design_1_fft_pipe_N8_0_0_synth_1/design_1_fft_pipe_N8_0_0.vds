@@ -1,0 +1,1000 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Jun  6 08:55:06 2024
+# Process ID: 7864
+# Current directory: C:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.runs/design_1_fft_pipe_N8_0_0_synth_1
+# Command line: vivado.exe -log design_1_fft_pipe_N8_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_fft_pipe_N8_0_0.tcl
+# Log file: C:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.runs/design_1_fft_pipe_N8_0_0_synth_1/design_1_fft_pipe_N8_0_0.vds
+# Journal file: C:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.runs/design_1_fft_pipe_N8_0_0_synth_1\vivado.jou
+# Running On: Maciek, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 4, Host memory: 17024 MB
+#-----------------------------------------------------------
+source design_1_fft_pipe_N8_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/macie/Desktop/SDUP/ip_repo/fft_pipe_N8_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_fft_pipe_N8_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13076
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1712.016 ; gain = 318.168
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_fft_pipe_N8_0_0' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ip/design_1_fft_pipe_N8_0_0/synth/design_1_fft_pipe_N8_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'fft_pipe_N8_v1_0' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'fft_pipe_N8_v1_0_S00_AXI' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'fft_p' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:79]
+INFO: [Synth 8-6157] synthesizing module 'stageN' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:112]
+INFO: [Synth 8-6157] synthesizing module 'butterfly' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:221]
+INFO: [Synth 8-6157] synthesizing module 'cplxmul' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:300]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:344]
+INFO: [Synth 8-6155] done synthesizing module 'cplxmul' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:300]
+WARNING: [Synth 8-6090] variable 'bottomR_out' is written by both blocking and non-blocking assignments, entire logic could be removed [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:287]
+WARNING: [Synth 8-6090] variable 'bottomI_out' is written by both blocking and non-blocking assignments, entire logic could be removed [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:288]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:221]
+INFO: [Synth 8-6157] synthesizing module 'twiddle' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:199]
+INFO: [Synth 8-6155] done synthesizing module 'twiddle' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:199]
+INFO: [Synth 8-6155] done synthesizing module 'stageN' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:112]
+INFO: [Synth 8-6157] synthesizing module 'stageN__parameterized0' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:112]
+INFO: [Synth 8-6157] synthesizing module 'twiddle__parameterized0' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:199]
+INFO: [Synth 8-6155] done synthesizing module 'twiddle__parameterized0' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:199]
+INFO: [Synth 8-6155] done synthesizing module 'stageN__parameterized0' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:112]
+INFO: [Synth 8-6157] synthesizing module 'stageN__parameterized1' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:112]
+INFO: [Synth 8-6157] synthesizing module 'twiddle__parameterized1' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:199]
+INFO: [Synth 8-6155] done synthesizing module 'twiddle__parameterized1' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:199]
+INFO: [Synth 8-6155] done synthesizing module 'stageN__parameterized1' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:112]
+INFO: [Synth 8-6157] synthesizing module 'reverse' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:158]
+WARNING: [Synth 8-6104] Input port '(null)[0].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[0].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[0].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+WARNING: [Synth 8-6104] Input port '(null)[1].index' has an internal driver [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:179]
+INFO: [Synth 8-6155] done synthesizing module 'reverse' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:158]
+WARNING: [Synth 8-689] width (4) of port connection 'ready' does not match port width (1) of module 'reverse' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'fft_p' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:79]
+WARNING: [Synth 8-689] width (4) of port connection 'ready' does not match port width (1) of module 'fft_p' [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0_S00_AXI.v:814]
+INFO: [Synth 8-6155] done synthesizing module 'fft_pipe_N8_v1_0_S00_AXI' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'fft_pipe_N8_v1_0' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_fft_pipe_N8_0_0' (0#1) [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ip/design_1_fft_pipe_N8_0_0/synth/design_1_fft_pipe_N8_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element reversed_index_reg was removed.  [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:189]
+WARNING: [Synth 8-7129] Port start[3] in module stageN__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[2] in module stageN__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[1] in module stageN__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ready[3] in module stageN__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[3] in module stageN__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[2] in module stageN__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[1] in module stageN__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[3] in module stageN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[2] in module stageN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[1] in module stageN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module fft_p is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1820.914 ; gain = 427.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1820.914 ; gain = 427.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1820.914 ; gain = 427.066
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.357 . Memory (MB): peak = 1820.914 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1877.992 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.152 . Memory (MB): peak = 1896.137 ; gain = 18.145
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1896.137 ; gain = 502.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1896.137 ; gain = 502.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1896.137 ; gain = 502.289
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'cplxmul'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                REAL_MUL |                              010 |                               01
+                IMAG_MUL |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'cplxmul'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1896.137 ; gain = 502.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   24 Bit       Adders := 48    
+	   2 Input   24 Bit       Adders := 60    
++---Registers : 
+	              192 Bit    Registers := 2     
+	               48 Bit    Registers := 72    
+	               32 Bit    Registers := 19    
+	               24 Bit    Registers := 136   
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 80    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 18    
+	   2 Input   24 Bit        Muxes := 48    
+	   3 Input    1 Bit        Muxes := 24    
+	   2 Input    1 Bit        Muxes := 31    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+DSP Report: Generating DSP genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x0)'*B.
+DSP Report: register genblk1[3].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x0)'*B.
+DSP Report: register genblk1[3].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[3].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[3].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x0)'*B.
+DSP Report: register genblk1[2].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x0)'*B.
+DSP Report: register genblk1[2].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[2].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[2].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x0)'*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x0)'*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x0)'*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x0)'*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[3].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[3].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[2].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[2].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+DSP Report: Generating DSP genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x3ffffc00)'*B.
+DSP Report: register genblk1[1].genblk1[1].butterfly/mul2I_reg is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x3ffffc00)'*B.
+DSP Report: register genblk1[1].genblk1[1].butterfly/mul2I_reg is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[1].genblk1[1].butterfly/mul1R_reg is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[1].genblk1[1].butterfly/mul1R_reg is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x0)'*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x0)'*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x3ffffc00)'*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x3ffffc00)'*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x0)'*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x0)'*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[1].genblk1[1].butterfly/mul1I_reg is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[1].genblk1[1].butterfly/mul1I_reg is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:331]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:329]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+WARNING: [Synth 8-3936] Found unconnected internal register 'genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB_reg' and it is trimmed from '48' to '17' bits. [c:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.gen/sources_1/bd/design_1/ipshared/0302/hdl/fft_pipe_N8_v1_0.v:332]
+DSP Report: Generating DSP genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x3ffffd2c)'*B.
+DSP Report: register genblk1[0].genblk1[3].butterfly/mul2R_reg is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x3ffffd2c)'*B.
+DSP Report: register genblk1[0].genblk1[3].butterfly/mul2R_reg is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[3].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[3].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x3ffffc00)'*B.
+DSP Report: register genblk1[0].genblk1[2].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x3ffffc00)'*B.
+DSP Report: register genblk1[0].genblk1[2].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[2].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[2].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x3ffffd2c)'*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x3ffffd2c)'*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0, operation Mode is: (A:0x0)'*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg, operation Mode is: (PCIN>>17)+(A:0x0)'*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul2I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1R_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[3].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[3].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[2].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[2].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0, operation Mode is: A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0.
+DSP Report: Generating DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul1I_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: register genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+DSP Report: operator genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 is absorbed into DSP genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg.
+WARNING: [Synth 8-7129] Port start[3] in module stageN__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[2] in module stageN__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[1] in module stageN__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ready[3] in module stageN__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[3] in module stageN__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[2] in module stageN__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[1] in module stageN__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[3] in module stageN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[2] in module stageN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port start[1] in module stageN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module fft_p is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module fft_pipe_N8_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg[9]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg[8]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg[7]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg[6]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg[5]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg[4]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg[3]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg[2]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg[1]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg[0]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg[9]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg[8]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg[7]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg[6]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg[5]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg[4]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg[3]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg[2]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg[1]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg[0]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg[9]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg[8]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg[7]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg[6]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg[5]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg[4]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg[3]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg[2]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg[1]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg[0]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg[9]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg[8]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg[7]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg[6]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg[5]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg[4]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg[3]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg[2]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg[1]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg[0]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg[9]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg[8]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg[7]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg[6]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg[5]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg[4]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg[3]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg[2]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg[1]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg[0]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg[9]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg[8]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg[7]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg[6]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg[5]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg[4]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg[3]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg[2]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg[1]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg[0]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg[9]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg[8]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg[7]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg[6]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg[5]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg[4]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg[3]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg[2]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg[1]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg[0]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg[9]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg[8]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg[7]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg[6]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg[5]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg[4]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg[3]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg[2]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg[1]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg[0]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg[9]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg[8]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg[7]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg[6]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg[5]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg[4]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg[3]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg[2]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg[1]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg[0]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg[9]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg[8]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg[7]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg[6]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg[5]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg[4]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg[3]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg[2]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg[1]) is unused and will be removed from module stageN.
+WARNING: [Synth 8-3332] Sequential element (genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg[0]) is unused and will be removed from module stageN.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1896.137 ; gain = 502.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|stageN      | (A:0x0)'*B                   | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x0)'*B        | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x0)'*B                   | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x0)'*B        | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x0)'*B                   | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x0)'*B        | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x0)'*B                   | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x0)'*B        | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x3ffffc00)'*B            | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x3ffffc00)'*B | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x0)'*B                   | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x0)'*B        | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x3ffffc00)'*B            | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x3ffffc00)'*B | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x0)'*B                   | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x0)'*B        | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x3ffffd2c)'*B            | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x3ffffd2c)'*B | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x3ffffc00)'*B            | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x3ffffc00)'*B | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x3ffffd2c)'*B            | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x3ffffd2c)'*B | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | (A:0x0)'*B                   | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+(A:0x0)'*B        | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A2*B                         | 24     | 18     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17)+A2*B              | 17     | 7      | -      | -      | 17     | 1    | 0    | -    | -    | -     | 0    | 1    | 
++------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 2427.895 ; gain = 1034.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 2443.355 ; gain = 1049.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2472.070 ; gain = 1078.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2489.023 ; gain = 1095.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2489.023 ; gain = 1095.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 2489.023 ; gain = 1095.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 2489.023 ; gain = 1095.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 2489.023 ; gain = 1095.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 2489.023 ; gain = 1095.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|stageN      | A'*B              | 0      | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A'*B              | 0      | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A'*B              | 0      | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A'*B              | 0      | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A'*B              | 0      | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A*B               | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 18     | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A'*B              | 0      | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A*B               | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 18     | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A'*B              | 0      | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A*B               | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 0      | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A*B               | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 11     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 18     | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A*B               | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A*B)'   | 0      | 18     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 0      | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 0      | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
+|stageN      | A''*B             | 30     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|stageN      | (PCIN>>17+A''*B)' | 30     | 18     | -      | -      | 17     | 2    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |   324|
+|2     |DSP_ALU         |    72|
+|3     |DSP_A_B_DATA    |    72|
+|7     |DSP_C_DATA      |    72|
+|8     |DSP_MULTIPLIER  |    72|
+|9     |DSP_M_DATA      |    72|
+|10    |DSP_OUTPUT      |    72|
+|12    |DSP_PREADD      |    72|
+|13    |DSP_PREADD_DATA |    72|
+|14    |LUT1            |     1|
+|15    |LUT2            |  2308|
+|16    |LUT3            |    42|
+|17    |LUT4            |    69|
+|18    |LUT5            |    72|
+|19    |LUT6            |   843|
+|20    |MUXF7           |   112|
+|21    |MUXF8           |    56|
+|22    |FDRE            |  4031|
+|23    |FDSE            |    13|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 2489.023 ; gain = 1095.176
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 450 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 2489.023 ; gain = 1019.953
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2489.023 ; gain = 1095.176
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.264 . Memory (MB): peak = 2511.344 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 564 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2561.031 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 72 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 72 instances
+
+Synth Design complete, checksum: 42ed9b8b
+INFO: [Common 17-83] Releasing license: Synthesis
+49 Infos, 236 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 2561.031 ; gain = 1273.727
+INFO: [Common 17-1381] The checkpoint 'C:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.runs/design_1_fft_pipe_N8_0_0_synth_1/design_1_fft_pipe_N8_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_fft_pipe_N8_0_0, cache-ID = d97d6da221b6f4bb
+INFO: [Coretcl 2-1174] Renamed 31 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/macie/Desktop/SDUP/fft_pipe_N8/fft_pipe_N8.runs/design_1_fft_pipe_N8_0_0_synth_1/design_1_fft_pipe_N8_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_fft_pipe_N8_0_0_utilization_synth.rpt -pb design_1_fft_pipe_N8_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  6 08:56:36 2024...

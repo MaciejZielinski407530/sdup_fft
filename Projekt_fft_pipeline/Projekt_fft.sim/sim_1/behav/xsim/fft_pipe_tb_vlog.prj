@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib "C:/Users/macie/Desktop/SDUP/Projekt_fft_pipline/Projekt_fft.srcs/sources_1/new/config.v" --include "../../../../Projekt_fft.srcs/sources_1/new" \
+"../../../../Projekt_fft.srcs/sources_1/new/butterfly.v" \
+"../../../../Projekt_fft.srcs/sources_1/new/cplxmul.v" \
+
+sv xil_defaultlib "C:/Users/macie/Desktop/SDUP/Projekt_fft_pipline/Projekt_fft.srcs/sources_1/new/config.v" --include "../../../../Projekt_fft.srcs/sources_1/new" \
+"../../../../Projekt_fft.srcs/sources_1/new/fft_p.v" \
+"../../../../Projekt_fft.srcs/sources_1/new/stage.v" \
+"../../../../Projekt_fft.srcs/sources_1/new/stage1.v" \
+"../../../../Projekt_fft.srcs/sources_1/new/stage2.v" \
+"../../../../Projekt_fft.srcs/sim_1/new/fft_pipe_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

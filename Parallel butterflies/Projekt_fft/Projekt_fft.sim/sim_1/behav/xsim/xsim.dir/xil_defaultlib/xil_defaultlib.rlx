@@ -1,0 +1,11 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sim_1/new/fft_tb.sv,1717681396,systemVerilog,,,C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/config.v,fft_tb,,uvm,../../../../Projekt_fft.srcs/sources_1/new,,,,,
+C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/butterfly.v,1717353092,verilog,,C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/cplxmul.v,,butterfly,,uvm,../../../../Projekt_fft.srcs/sources_1/new,,,,,
+C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/config.v,1717665561,systemVerilog,,C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/butterfly.v;C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sim_1/new/fft_tb.sv,,,,uvm,../../../../Projekt_fft.srcs/sources_1/new,,,,,
+C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/cplxmul.v,1717353092,verilog,,C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/fft.v,,cplxmul,,uvm,../../../../Projekt_fft.srcs/sources_1/new,,,,,
+C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/fft.v,1717678221,verilog,,C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/reverse.v,,fft,,uvm,../../../../Projekt_fft.srcs/sources_1/new,,,,,
+C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/reverse.v,1717353092,verilog,,,,reverse,,uvm,../../../../Projekt_fft.srcs/sources_1/new,,,,,
