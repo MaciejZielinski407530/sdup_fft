@@ -1,0 +1,698 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Thu Jun  6 08:59:40 2024
+| Host         : Maciek running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+| Design       : design_1_wrapper
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 132
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPIP-2 | Warning  | Input pipelining       | 24         |
+| DPOP-3 | Warning  | PREG Output pipelining | 36         |
+| DPOP-4 | Warning  | MREG Output pipelining | 72         |
++--------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#9 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#10 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#11 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#12 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#13 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#14 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#15 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#16 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#17 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#18 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#19 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#20 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#21 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#22 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#23 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0 input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#24 Warning
+Input pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg input design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#3 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#4 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#5 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#6 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#7 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#8 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#9 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#10 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#11 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#12 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#13 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#14 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#15 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#16 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#17 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#18 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#19 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#20 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#21 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#22 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#23 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#24 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#25 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#26 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#27 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#28 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#29 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#30 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#31 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#32 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#33 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#34 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#35 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#36 Warning
+PREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0 output design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#4 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#5 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#6 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#7 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#8 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#9 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#10 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#11 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#12 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#13 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#14 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#15 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#16 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#17 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#18 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[2].genblk1[0].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#19 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#20 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#21 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#22 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#23 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#24 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[0].stage/genblk1[3].genblk1[0].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#25 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#26 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#27 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#28 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#29 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#30 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#31 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#32 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#33 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#34 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#35 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#36 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#37 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#38 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#39 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#40 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#41 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#42 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[0].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#43 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#44 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#45 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#46 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#47 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#48 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[1].stage/genblk1[1].genblk1[1].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#49 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#50 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#51 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#52 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#53 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#54 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[0].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#55 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#56 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#57 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#58 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#59 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#60 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[1].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#61 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#62 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#63 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#64 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#65 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#66 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[2].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#67 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#68 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/aMinusBtimesD_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#69 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#70 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cMinusDtimesA_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#71 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0 multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#72 Warning
+MREG Output pipelining  
+DSP design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB_reg multiplier stage design_1_i/fft_pipe_N8_0/inst/fft_pipe_N8_v1_0_S00_AXI_inst/fft/genblk1[2].stage/genblk1[0].genblk1[3].butterfly/mul/cPlusDtimesB_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+
