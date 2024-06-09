@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Projekt_fft.srcs/sources_1/new" \
+"../../../../Projekt_fft.srcs/sources_1/new/butterfly.v" \
+"../../../../Projekt_fft.srcs/sources_1/new/cplxmul.v" \
+"../../../../Projekt_fft.srcs/sources_1/new/reverse.v" \
+
+sv xil_defaultlib  --include "../../../../Projekt_fft.srcs/sources_1/new" \
+"../../../../Projekt_fft.srcs/sources_1/new/calculating.sv" \
+"../../../../Projekt_fft.srcs/sources_1/new/clocking_in.sv" \
+"../../../../Projekt_fft.srcs/sources_1/new/clocking_out.sv" \
+"../../../../Projekt_fft.srcs/sources_1/new/fft.v" \
+"../../../../Projekt_fft.srcs/sim_1/new/fft_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
