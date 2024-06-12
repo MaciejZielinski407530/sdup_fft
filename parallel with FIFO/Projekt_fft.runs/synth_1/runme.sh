@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.runs/synth_1'
+HD_PWD='C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

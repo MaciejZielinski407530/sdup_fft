@@ -45,8 +45,8 @@ generate
     end
 endgenerate  
 
-assign dataI = data_in_R;
-assign dataQ = data_in_I;
+//assign dataI = data_in_R;
+//assign dataQ = data_in_I;
 
 initial begin
     cycles_count <= PIPE_LATENCY;
@@ -70,10 +70,12 @@ end
     
 always @(posedge clk)
 begin
-    if (ce == 1 && ce_prev == 0&&stop_count == 0)begin
+    if (ce == 1 && ce_prev == 0)begin
         partialFftSizeBit <= 1;
         data_read <= 1;
-        ce_prev <= 1;        
+        ce_prev <= 1;
+        dataI <= data_in_R;
+        dataQ <= data_in_I;        
     end
     if(data_read == 1) begin
         if(butterflyStarted == 1'b0)
@@ -133,7 +135,7 @@ begin
         ce_out <= 1;
         cycles_count <= PIPE_LATENCY;
         ce_prev <=  0;
-        stop_count = 1;
+        //stop_count = 1;
    end
    
 end    

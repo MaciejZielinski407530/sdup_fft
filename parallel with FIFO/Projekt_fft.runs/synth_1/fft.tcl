@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.runs/synth_1/fft.tcl"
+  variable script "C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.runs/synth_1/fft.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,19 +76,24 @@ create_project -in_memory -part xc7k70tfbv676-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.cache/wt [current_project]
-set_property parent.project_path C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.cache/wt [current_project]
+set_property parent.project_path C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.cache/ip [current_project]
+set_property ip_output_repo c:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_verilog -library xil_defaultlib -sv {
+  C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.srcs/sources_1/new/calculating.sv
+  C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.srcs/sources_1/new/clocking_in.sv
+  C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.srcs/sources_1/new/clocking_out.sv
+  C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.srcs/sources_1/new/fft.v
+}
 read_verilog -library xil_defaultlib {
-  C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/butterfly.v
-  C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/cplxmul.v
-  C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/reverse.v
-  C:/Users/macie/Desktop/SDUP/04_06/sdup_fft-piotr/Projekt_fft/Projekt_fft.srcs/sources_1/new/fft.v
+  C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.srcs/sources_1/new/butterfly.v
+  C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.srcs/sources_1/new/cplxmul.v
+  C:/Users/macie/Desktop/SDUP/Do_przerobki/Projekt_fft/Projekt_fft.srcs/sources_1/new/reverse.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
