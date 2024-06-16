@@ -1,0 +1,412 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Jun 16 08:20:22 2024
+# Process ID: 6560
+# Current directory: D:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.runs/kv260_fft_dma_fft_dma_0_2_synth_1
+# Command line: vivado.exe -log kv260_fft_dma_fft_dma_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source kv260_fft_dma_fft_dma_0_2.tcl
+# Log file: D:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.runs/kv260_fft_dma_fft_dma_0_2_synth_1/kv260_fft_dma_fft_dma_0_2.vds
+# Journal file: D:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.runs/kv260_fft_dma_fft_dma_0_2_synth_1\vivado.jou
+# Running On: HAX00R, OS: Windows, CPU Frequency: 3400 MHz, CPU Physical cores: 4, Host memory: 17103 MB
+#-----------------------------------------------------------
+source kv260_fft_dma_fft_dma_0_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/vivado-projekty/sdup_fft/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.cache/ip 
+Command: synth_design -top kv260_fft_dma_fft_dma_0_2 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3752
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1712.160 ; gain = 318.953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'kv260_fft_dma_fft_dma_0_2' [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ip/kv260_fft_dma_fft_dma_0_2/synth/kv260_fft_dma_fft_dma_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'fft_dma_v1_0' [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'fft' [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:93]
+INFO: [Synth 8-6157] synthesizing module 'clocking_in' [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:232]
+INFO: [Synth 8-6157] synthesizing module 'reverse' [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:450]
+INFO: [Synth 8-6155] done synthesizing module 'reverse' (0#1) [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:450]
+WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:294]
+INFO: [Synth 8-6155] done synthesizing module 'clocking_in' (0#1) [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:232]
+INFO: [Synth 8-6157] synthesizing module 'calculating' [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:304]
+INFO: [Synth 8-6157] synthesizing module 'butterfly' [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:460]
+INFO: [Synth 8-6157] synthesizing module 'cplxmul' [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:539]
+INFO: [Synth 8-155] case statement is not full and has no default [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:581]
+INFO: [Synth 8-6155] done synthesizing module 'cplxmul' (0#1) [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:539]
+WARNING: [Synth 8-6090] variable 'bottomR_out' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:526]
+WARNING: [Synth 8-6090] variable 'bottomI_out' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:527]
+INFO: [Synth 8-6155] done synthesizing module 'butterfly' (0#1) [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:460]
+WARNING: [Synth 8-6090] variable 'dataR' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:428]
+WARNING: [Synth 8-6090] variable 'dataI' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:429]
+WARNING: [Synth 8-6090] variable 'dataR' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:430]
+WARNING: [Synth 8-6090] variable 'dataI' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:431]
+WARNING: [Synth 8-6090] variable 'dataR' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:428]
+WARNING: [Synth 8-6090] variable 'dataI' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:429]
+WARNING: [Synth 8-6090] variable 'dataR' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:430]
+WARNING: [Synth 8-6090] variable 'dataI' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:431]
+WARNING: [Synth 8-6090] variable 'dataR' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:428]
+WARNING: [Synth 8-6090] variable 'dataI' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:429]
+WARNING: [Synth 8-6090] variable 'dataR' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:430]
+WARNING: [Synth 8-6090] variable 'dataI' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:431]
+WARNING: [Synth 8-6090] variable 'dataR' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:428]
+WARNING: [Synth 8-6090] variable 'dataI' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:429]
+WARNING: [Synth 8-6090] variable 'dataR' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:430]
+WARNING: [Synth 8-6090] variable 'dataI' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:431]
+WARNING: [Synth 8-6090] variable 'partialFftSizeBit' is written by both blocking and non-blocking assignments, entire logic could be removed [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:434]
+INFO: [Synth 8-6155] done synthesizing module 'calculating' (0#1) [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:304]
+INFO: [Synth 8-6157] synthesizing module 'clocking_out' [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'clocking_out' (0#1) [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'fft' (0#1) [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'fft_dma_v1_0' (0#1) [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'kv260_fft_dma_fft_dma_0_2' (0#1) [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ip/kv260_fft_dma_fft_dma_0_2/synth/kv260_fft_dma_fft_dma_0_2.v:53]
+WARNING: [Synth 8-6014] Unused sequential element inputIdx_reg was removed.  [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:404]
+WARNING: [Synth 8-6014] Unused sequential element started_reg was removed.  [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:198]
+WARNING: [Synth 8-7129] Port s00_axis_aresetn in module fft_dma_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[3] in module fft_dma_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[2] in module fft_dma_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[1] in module fft_dma_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[0] in module fft_dma_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axis_aclk in module fft_dma_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axis_aresetn in module fft_dma_v1_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1806.871 ; gain = 413.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1824.785 ; gain = 431.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1824.785 ; gain = 431.578
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1824.785 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1928.188 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1946.039 ; gain = 17.852
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1946.039 ; gain = 552.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1946.039 ; gain = 552.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1946.039 ; gain = 552.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'cplxmul'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              001 |                               00
+                REAL_MUL |                              010 |                               01
+                IMAG_MUL |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'cplxmul'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1946.039 ; gain = 552.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   16 Bit       Adders := 16    
+	   2 Input   16 Bit       Adders := 20    
+	   2 Input    8 Bit       Adders := 5     
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 5     
+	   2 Input    3 Bit       Adders := 1     
+	   3 Input    3 Bit       Adders := 3     
++---Registers : 
+	              128 Bit    Registers := 8     
+	               16 Bit    Registers := 66    
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 39    
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 10    
+	   2 Input   16 Bit        Muxes := 18    
+	   8 Input   16 Bit        Muxes := 8     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 24    
+	   3 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul/cMinusDtimesA_reg' and it is trimmed from '32' to '22' bits. [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:568]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul/cPlusDtimesB_reg' and it is trimmed from '32' to '22' bits. [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:569]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mul/aMinusBtimesD_reg' and it is trimmed from '32' to '22' bits. [d:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.gen/sources_1/bd/kv260_fft_dma/ipshared/8b61/hdl/fft_dma_v1_0.v:566]
+DSP Report: Generating DSP mul/aMinusBtimesD_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul2I_reg is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: register mul/aMinusBtimesD_reg is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: operator mul/aMinusBtimesD0 is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP mul/cMinusDtimesA_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul1R_reg is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: register mul/cMinusDtimesA_reg is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: operator mul/cMinusDtimesA0 is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP mul/cPlusDtimesB_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul1I_reg is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: register mul/cPlusDtimesB_reg is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: operator mul/cPlusDtimesB0 is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP mul/aMinusBtimesD_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul2I_reg is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: register mul/aMinusBtimesD_reg is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: operator mul/aMinusBtimesD0 is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP mul/cMinusDtimesA_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul1R_reg is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: register mul/cMinusDtimesA_reg is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: operator mul/cMinusDtimesA0 is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP mul/cPlusDtimesB_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul1I_reg is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: register mul/cPlusDtimesB_reg is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: operator mul/cPlusDtimesB0 is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP mul/aMinusBtimesD_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul2I_reg is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: register mul/aMinusBtimesD_reg is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: operator mul/aMinusBtimesD0 is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP mul/cMinusDtimesA_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul1R_reg is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: register mul/cMinusDtimesA_reg is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: operator mul/cMinusDtimesA0 is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP mul/cPlusDtimesB_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul1I_reg is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: register mul/cPlusDtimesB_reg is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: operator mul/cPlusDtimesB0 is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: Generating DSP mul/aMinusBtimesD_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul2I_reg is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: register mul/aMinusBtimesD_reg is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: operator mul/aMinusBtimesD0 is absorbed into DSP mul/aMinusBtimesD_reg.
+DSP Report: Generating DSP mul/cMinusDtimesA_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul1R_reg is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: register mul/cMinusDtimesA_reg is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: operator mul/cMinusDtimesA0 is absorbed into DSP mul/cMinusDtimesA_reg.
+DSP Report: Generating DSP mul/cPlusDtimesB_reg, operation Mode is: (A*B2)'.
+DSP Report: register mul1I_reg is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: register mul/cPlusDtimesB_reg is absorbed into DSP mul/cPlusDtimesB_reg.
+DSP Report: operator mul/cPlusDtimesB0 is absorbed into DSP mul/cPlusDtimesB_reg.
+INFO: [Synth 8-3917] design kv260_fft_dma_fft_dma_0_2 has port m00_axis_tstrb[3] driven by constant 1
+INFO: [Synth 8-3917] design kv260_fft_dma_fft_dma_0_2 has port m00_axis_tstrb[2] driven by constant 1
+INFO: [Synth 8-3917] design kv260_fft_dma_fft_dma_0_2 has port m00_axis_tstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design kv260_fft_dma_fft_dma_0_2 has port m00_axis_tstrb[0] driven by constant 1
+WARNING: [Synth 8-7129] Port s00_axis_aresetn in module kv260_fft_dma_fft_dma_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[3] in module kv260_fft_dma_fft_dma_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[2] in module kv260_fft_dma_fft_dma_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[1] in module kv260_fft_dma_fft_dma_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axis_tstrb[0] in module kv260_fft_dma_fft_dma_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axis_aclk in module kv260_fft_dma_fft_dma_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axis_aresetn in module kv260_fft_dma_fft_dma_0_2 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1946.039 ; gain = 552.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|butterfly   | (A*B2)'     | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 2416.590 ; gain = 1023.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 2416.590 ; gain = 1023.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 2436.965 ; gain = 1043.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2447.922 ; gain = 1054.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2447.922 ; gain = 1054.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 2447.922 ; gain = 1054.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 2447.922 ; gain = 1054.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 2447.922 ; gain = 1054.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2447.922 ; gain = 1054.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|butterfly   | (A*B')'     | 30     | 18     | -      | -      | 22     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B'')'    | 30     | 18     | -      | -      | 22     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B'')'    | 30     | 18     | -      | -      | 22     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B'')'    | 30     | 18     | -      | -      | 22     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B'')'    | 30     | 18     | -      | -      | 22     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B'')'    | 30     | 18     | -      | -      | 22     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B')'     | 30     | 18     | -      | -      | 22     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B'')'    | 30     | 18     | -      | -      | 22     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B'')'    | 30     | 18     | -      | -      | 22     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B')'     | 30     | 18     | -      | -      | 22     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B'')'    | 30     | 18     | -      | -      | 22     | 0    | 2    | -    | -    | -     | 0    | 1    | 
+|butterfly   | (A*B'')'    | 30     | 18     | -      | -      | 22     | 0    | 2    | -    | -    | -     | 0    | 1    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |    90|
+|2     |DSP_ALU         |    12|
+|3     |DSP_A_B_DATA    |    12|
+|5     |DSP_C_DATA      |    12|
+|6     |DSP_MULTIPLIER  |    12|
+|7     |DSP_M_DATA      |    12|
+|8     |DSP_OUTPUT      |    12|
+|9     |DSP_PREADD      |    12|
+|10    |DSP_PREADD_DATA |    12|
+|11    |LUT1            |    28|
+|12    |LUT2            |   614|
+|13    |LUT3            |   451|
+|14    |LUT4            |    26|
+|15    |LUT5            |   365|
+|16    |LUT6            |   610|
+|17    |MUXF7           |    16|
+|18    |FDRE            |  1936|
+|19    |FDSE            |     5|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2447.922 ; gain = 1054.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 2447.922 ; gain = 933.461
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2447.922 ; gain = 1054.715
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.090 . Memory (MB): peak = 2459.945 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 118 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2488.098 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 12 instances
+
+Synth Design complete, checksum: 5588ab42
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 42 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2488.098 ; gain = 1193.809
+INFO: [Common 17-1381] The checkpoint 'D:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.runs/kv260_fft_dma_fft_dma_0_2_synth_1/kv260_fft_dma_fft_dma_0_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP kv260_fft_dma_fft_dma_0_2, cache-ID = 922aaf54dfa4f458
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/vivado-projekty/sdup_fft/parallel_dma_compliant/kv260_fft_dma/kv260_fft_dma.runs/kv260_fft_dma_fft_dma_0_2_synth_1/kv260_fft_dma_fft_dma_0_2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file kv260_fft_dma_fft_dma_0_2_utilization_synth.rpt -pb kv260_fft_dma_fft_dma_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 16 08:21:34 2024...
